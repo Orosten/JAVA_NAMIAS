@@ -1,3 +1,6 @@
+//Gabriel NAMIAS
+// 13/10/2024
+
 package fr.esiee;
 import java.sql.Connection;
 import java.sql.DriverManager;

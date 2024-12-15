@@ -1,6 +1,5 @@
 package fr.esiee.modele;
 
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 public class Trajet {
@@ -10,7 +9,7 @@ public class Trajet {
     private Arret arretDepart;
     private Arret arretArrivee;
 
-    public Trajet() {}
+    public Trajet(LocalDateTime tempsDepart, String code, LocalDateTime tempsArrivee, Arret arretDepart, Arret arretArrivee) {}
 
     public Trajet(String code, LocalDateTime tempsDepart, LocalDateTime tempsArrivee, Arret arretDepart, Arret arretArrivee) {
         this.code = code;

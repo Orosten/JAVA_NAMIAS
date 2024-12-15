@@ -50,7 +50,7 @@ public class Main {
         LocalDateTime tempsDepart2 = LocalDateTime.of(2024, 10, 2, 18, 0);
         LocalDateTime tempsArrivee2 = LocalDateTime.of(2024, 10, 2, 21, 30);
 
-        Trajet trajet1 = new Trajet();
+        Trajet trajet1 = new Trajet(tempsDepart, code, tempsArrivee, arretDepart, arretArrivee);
         trajet1.setCode("001");
         trajet1.setTempsDepart(tempsDepart1);
         trajet1.setTempsArrivee(tempsArrivee1);

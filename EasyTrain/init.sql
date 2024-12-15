@@ -5,7 +5,7 @@ CREATE DATABASE easytrain;
 CREATE TABLE Utilisateur (
      id INT(3) NOT NULL AUTO_INCREMENT,
      login VARCHAR(20) NOT NULL UNIQUE,
-     mdr VARCHAR(256) NOT NULL,
+     mdp VARCHAR(256) NOT NULL,
      nom VARCHAR(30) NOT NULL,
      prenom VARCHAR(30) NOT NULL,
      date_embauche DATETIME NOT NULL,

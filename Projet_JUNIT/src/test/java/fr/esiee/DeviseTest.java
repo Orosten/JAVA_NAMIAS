@@ -1,6 +1,8 @@
 package fr.esiee;
 
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeEach;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -15,6 +17,26 @@ class DeviseTest {
         Devise result = m12CHF.add(m14CHF);
 
         assertEquals(expected, result, "L'addition des devises est incorrecte");
+    }
+
+    @BeforeEach
+    void beforeEach() {
+        System.out.println("Je suis avant exécution d'une méthode de test");
+    }
+
+    @AfterEach
+    void afterEach() {
+        System.out.println("Je suis APRES exécution d'une méthode de test");
+    }
+
+    @Test
+    void test1() {
+        System.out.println("Test 1 en cours");
+    }
+
+    @Test
+    void test2() {
+        System.out.println("Test 2 en cours");
     }
 
     void testEquals() {

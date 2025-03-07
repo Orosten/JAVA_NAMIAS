@@ -77,9 +77,9 @@ CREATE TABLE IF NOT EXISTS `utilisateur` (
 DROP TRIGGER IF EXISTS `bloquer_test`; -- Supprime le trigger s'il existe déjà
 DELIMITER $$ -- Change le délimiteur pour le bloc de code
 
-CREATE TRIGGER `bloquer_test` BEFORE INSERT ON `utilisateur` FOR EACH ROW BEGIN
+CREATE TRIGGER `bloquer_test` BEFORE INSERT ON `utilisateur` FOR EACH ROW BEGIN -- se déclenche avant l'insert dans la table user
   IF NEW.nom LIKE '%test%' THEN -- Vérifie si le nom contient "test"
-    SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'Nom invalide: ne peut pas contenir "test"'; -- Affiche une erreur
+    SIGNAL SQLSTATE '45000' SET MESSAGE_TEXT = 'Nom invalide: ne peut pas contenir "test"'; -- Affiche une erreur si le nom est égal à test
   END IF;
 END
 $$
